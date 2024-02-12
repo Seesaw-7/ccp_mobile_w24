@@ -39,6 +39,7 @@ a[aria-current="page"] {
   color: #fff;
   background-color: #007bff;
   border-bottom: 2px solid #0056b3;
+  text-decoration: underline;
 }
 
 .visually-hidden {
@@ -65,4 +66,32 @@ a[aria-current="page"] {
 
 .skip-link:focus {
   top: 0;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 768px) { /* Adjust the breakpoint as needed */
+  nav ul {
+    grid-template-columns: repeat(4, 1fr); /* Adjust based on the number of items */
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr); /* Example: 2 columns layout */
+    /* Adjust other properties as needed */
+  }
 }
