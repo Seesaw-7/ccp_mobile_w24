@@ -28,6 +28,9 @@ img{
   padding: 10px;
   margin: 50px 20px;
   border-top-right-radius: 30px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 li{
@@ -76,9 +79,9 @@ nav ul {
   list-style-type: none;
 }
 
-@media (min-width: 768px) { /* Adjust the breakpoint as needed */
+@media (min-width: 768px) { 
   nav ul {
-    grid-template-columns: repeat(4, 1fr); /* Adjust based on the number of items */
+    grid-template-columns: repeat(4, 1fr); 
   }
 }
 
@@ -91,7 +94,14 @@ main {
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: repeat(2, 1fr); /* Example: 2 columns layout */
-    /* Adjust other properties as needed */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important; 
+    transition-duration: 0s !important;
   }
 }
