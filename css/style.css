@@ -40,8 +40,8 @@ li{
 
 a[aria-current="page"] {
   color: #fff;
-  background-color: #007bff;
-  border-bottom: 2px solid #0056b3;
+  background-color: black;
+  /* border-bottom: 2px solid #0056b3; */
   text-decoration: underline;
 }
 
